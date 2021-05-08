@@ -47,6 +47,30 @@ h1 {
 }
 ```
 
+## Shorthand Properties
+
+You can use shorthand properties to combine multiple properties into a single one, thus simplifying the code. Some of them have a specific order to put the values, like on `margin`.
+
+```css
+h1 {
+    border-width: 2px;
+    border-style: dashed | solid;
+    border-color: orange;
+
+    /* The above can be simplified like below */
+    border: 2px dashed orange;
+}
+
+div {
+    margin: 10px;              /* margin will be applied on all sides */
+
+    margin: 10px 5px;          /* first value is top-bottom and second
+                                 is left-right */
+    margin: 10px 5px 5px 10px; /* read the order as clock wise, like:
+                                  top-right-bottom-left */
+}
+```
+
 # Cascading
 
   As CSS being cascading, selecting a single element doesn't mean it will affect other elements besides the one being selected. Because elements can contain inner elements, they will have the style applied. Think it's something like inheritance, as the father element rule will influence his sons.
